@@ -1,7 +1,8 @@
 # API - Teste Leadster
 
-API para cadastro de contatos
-projeto do front end para consumir a API: https://github.com/felnente/front-test-dev
+API para cadastro de contatos.
+
+Projeto frontend para consumir a API: https://github.com/felnente/front-test-dev
 
 ## Dependências
 
