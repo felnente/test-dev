@@ -1,24 +1,37 @@
-# README
+# API - Teste Leadster
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+API para cadastro de contatos
+projeto do front end para consumir a API: https://github.com/felnente/front-test-dev
 
-Things you may want to cover:
+## Dependências
 
-* Ruby version
+- [Docker](http://docs.docker.com/engine/installation/)
+- [Docker-compose](https://docs.docker.com/compose/)
 
-* System dependencies
+## Iniciando o Projeto
 
-* Configuration
+- Clone o projeto do repositório
+ 
+`https://github.com/felnente/test-dev.git`
 
-* Database creation
+- Acesse o diretório do projeto e rode o comando para cria os containers:
+(Junto com a criação do container o bundle install para instalar as dependência e o rails s para subir o 
+servidor são executados automaticamente)
 
-* Database initialization
+`docker-compose up -d`
 
-* How to run the test suite
+- Acesse o container da aplicação:
 
-* Services (job queues, cache servers, search engines, etc.)
+`docker-compose exec api bash`
 
-* Deployment instructions
+- Criar o banco de dados:
 
-* ...
+`rails db:create`
+
+- Criar as tabelas do banco
+
+`rails db:migrate`
+
+- API esta pronta para ser consumida no endereço:
+
+`http://localhost:3000/`
