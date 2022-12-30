@@ -36,3 +36,12 @@ servidor são executados automaticamente)
 - API esta pronta para ser consumida no endereço:
 
 `http://localhost:3000/`
+
+- Acesso ao bando de dados pode ser feito pelo adminer:
+
+Pelo Browser acesse o link [adminer](http://adminer.leadster.localhost:8081/)
+- Sistema: PostgreSQL
+- Servidor: db
+- Usuário: postgres
+- Senha: password
+- Base de dados: api_development
