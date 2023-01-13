@@ -1,5 +1,6 @@
 class ContactsController < ApplicationController
   include Paginable
+  
 
   before_action :set_contact, only: [:show, :update, :destroy]
 
@@ -17,22 +18,14 @@ class ContactsController < ApplicationController
 
   # POST /contacts
   def create
-    @contact = Contact.new(contact_params)
+    @contact = Contact.new(contact_params) 
 
-    if @contact.save
-      render json: @contact, status: :created, location: @contact
-    else
-      render json: @contact.errors, status: :unprocessable_entity
-    end
+    generic_create(@contact)
   end
 
   # PATCH/PUT /contacts/1
   def update
-    if @contact.update(contact_params)
-      render json: @contact
-    else
-      render json: @contact.errors, status: :unprocessable_entity
-    end
+    generic_update(@contact, contact_params)
   end
 
   # DELETE /contacts/1
