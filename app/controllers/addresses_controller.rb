@@ -18,21 +18,13 @@ class AddressesController < ApplicationController
   # POST /addresses
   def create
     @address = Address.new(address_params)
-
-    if @address.save
-      render json: @address, status: :created, location: @address
-    else
-      render json: @address.errors, status: :unprocessable_entity
-    end
+    
+    generic_create(@address)
   end
 
   # PATCH/PUT /addresses/1
   def update
-    if @address.update(address_params)
-      render json: @address
-    else
-      render json: @address.errors, status: :unprocessable_entity
-    end
+    generic_update(@address, address_params)
   end
 
   # DELETE /addresses/1
